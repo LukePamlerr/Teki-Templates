@@ -1,0 +1,14 @@
+<!-- app/templates/upload.html -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>Upload a Template</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">{{ form.name.label }} {{ form.name(class="form-control") }}</div>
+        <div class="mb-3">{{ form.description.label }} {{ form.description(class="form-control") }}</div>
+        <div class="mb-3">{{ form.category.label }} {{ form.category(class="form-control") }}</div>
+        <div class="mb-3">{{ form.tags.label }} {{ form.tags(class="form-control") }}</div>
+        <div class="mb-3">{{ form.code.label }} {{ form.code(class="form-control") }}</div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+{% endblock %}
